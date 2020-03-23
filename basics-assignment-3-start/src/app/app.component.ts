@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  paragraphVisibility: boolean = false;
+  toggleNumberClicks = [];
+
+  toggleParagraphVisibility() {
+    this.paragraphVisibility = !this.paragraphVisibility;
+    this.toggleNumberClicks.push(this.toggleNumberClicks.length + 1);
+  }
 }
