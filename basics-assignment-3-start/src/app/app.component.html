@@ -12,10 +12,10 @@
       <button (click)="toggleParagraphVisibility()" class="btn btn-primary">Display Details</button>
 
       <p *ngIf="paragraphVisibility">Secret Password = tuna</p>
-      <p *ngFor="let item of toggleNumberClicks"
-        [ngClass]="{'white': item >= 5}"
-        [ngStyle]="{backgroundColor: item >= 5 ? 'blue' : 'transparent'}"
-      >Number of clicks = {{item}}</p>
+      <p *ngFor="let item of toggleNumberClicks; let i = index"
+        [ngClass]="{'white': i >= 4}"
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+      >{{item}}</p>
     </div>
   </div>
 </div>

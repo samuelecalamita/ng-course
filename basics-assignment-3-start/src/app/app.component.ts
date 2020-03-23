@@ -11,6 +11,6 @@ export class AppComponent {
 
   toggleParagraphVisibility() {
     this.paragraphVisibility = !this.paragraphVisibility;
-    this.toggleNumberClicks.push(this.toggleNumberClicks.length + 1);
+    this.toggleNumberClicks.push(new Date());
   }
 }
